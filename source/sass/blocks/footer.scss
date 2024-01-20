@@ -30,10 +30,14 @@
   }
 
   &__social-links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
   }
 
   &__social-link {
