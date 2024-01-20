@@ -29,7 +29,7 @@
   }
 
   &__description-left {
-    width: 39%;
+    width: 40%;
 
     @media (max-width: $mobile) {
       width: 100%;
@@ -37,6 +37,8 @@
   }
 
   &__description-right {
+    width: 55%;
+
     @media (max-width: $mobile) {
       width: 100%;
     }
