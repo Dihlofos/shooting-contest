@@ -1,0 +1,68 @@
+.button {
+    display: inline-flex;
+    height: 6rem;
+    justify-content: center;
+    align-items: center;
+    background-color: $darkRed;
+    font-family: $mossport;
+    text-transform: uppercase;
+    color: $white;
+    padding: 1rem 2rem;
+    margin: 0;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 1;
+    min-width: 17.8rem;
+    text-align: center;
+    border: 2px solid $darkRed;
+    transition: 0.2s color ease-in-out, 0.2s background-color ease-in-out, 0.2s border-color ease-in-out;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+        background-color: $purpler;
+        color: $darkRed;
+    }
+
+    @media (max-width: $tablet) {
+      &:hover,
+      &:active {
+        background-color: $darkRed;
+        color: $white;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 18px;
+      padding: 11px;
+      height: 45px;
+    }
+
+    &--white {
+      background-color: $white;
+      border-color: $white;
+      color: $darkRed;
+
+      &:hover,
+      &:active {
+        background-color: transparent;
+        color: $white;
+
+          @media (max-width: $tablet) {
+            background-color: $white;
+            color: $darkRed;
+          }
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 18px;
+      }
+    }
+
+    &--big {
+      font-size: 3rem;
+    }
+
+}

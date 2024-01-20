@@ -1,0 +1,107 @@
+.footer {
+  padding: 13.9rem 0 0;
+  color: $white;
+
+  &__title {
+    color: $white;
+    margin: 0;
+    line-height: 1;
+  }
+
+  &__wrapper {
+    padding: 6.3rem 0 5rem;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    background-color: $darkPurple;
+  }
+
+  &__social-link {
+    color: $white;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $darkRed;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 6rem;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 8rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    width: 52%;
+  }
+
+  &__right {
+    width: 48%;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 0 0;
+  }
+
+  &__mail-title {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-height: 1;
+    margin: 0 0 0.5rem;
+  }
+
+  &__mail-link {
+    font-size: 3.2rem;
+    line-height: 1;
+    text-decoration: none;
+    color: $white;
+    font-weight: 400;
+  }
+
+  &__descr {
+    font-size: 1.4rem;
+    margin-top: 2.4rem;
+    max-width: 43.4rem;
+
+    ul {
+      padding-left: 2.2rem;
+      margin: 0;
+    }
+
+    li {
+      margin: 0 0 0.6rem;
+    }
+
+    p {
+      margin: 0 0 3.5rem;
+    }
+  }
+
+  &__doc-link {
+    display: inline-flex;
+    justify-content: flex-end;
+    color: $white;
+    text-decoration: none;
+    transition: 0.2s color ease-in;
+    margin-top: 2.5rem;
+
+    &:hover {
+      color: $darkRed
+    }
+  }
+}

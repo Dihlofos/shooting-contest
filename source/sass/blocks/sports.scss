@@ -1,0 +1,108 @@
+.sports {
+  position: relative;
+  z-index: 7;
+
+  &__description {
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 4rem 3rem;
+    box-shadow: 0px 0px 30px 0px rgba(31, 31, 31, 0.06);
+    margin: 0 0 2rem;
+    font-size: 2rem;
+    line-height: 1.4;
+
+    p {
+      margin: 0;
+    }
+
+    p:not(:last-child) {
+      margin: 0 0 1rem;
+    }
+  }
+
+  &__description-left {
+    width: 39%;
+  }
+
+  &__description-right {
+    width: 54.4%;
+  }
+
+  &__button {
+    &:hover {
+      background-color: $white;
+      color: $darkRed
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 0 2.4rem;
+  }
+
+  &__block-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+    height: 100%;
+  }
+
+  &__block {
+    position: relative;
+    border-radius: 20px;
+    padding: 3rem 3rem 3rem 3rem;
+    width: calc(50% - 1rem);
+    color: $white;
+    height: 33rem;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $darkRed;
+      border-radius: 20px;
+      transition: 0.2s transform ease-in;
+    }
+
+    &:hover {
+      &:before {
+        transform: scale(1.04,1.08);
+      }
+    }
+  }
+
+  &__block-title {
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin: 0 0 1rem;
+  }
+
+  &__block-text {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin: 0 0;
+
+    p {
+      margin: 0 0 1.4rem;
+    }
+  }
+
+  &__warning {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    max-width: 88rem;
+  }
+
+
+}

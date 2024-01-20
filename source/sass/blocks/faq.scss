@@ -1,0 +1,166 @@
+.faq {
+  position: relative;
+  padding: 7.8rem 0 6rem;
+  z-index: 2;
+
+  @media (max-width: $tablet) {
+    padding: 30px 0 70px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 83px 0 88px;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 3.5rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 30px;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 15px;
+    }
+  }
+
+  &__accordeon {
+    position: relative;
+    z-index: 2;
+  }
+
+
+  &__item {
+    position: relative;
+    width: 100%;
+    margin: 0 0 1.9rem;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: $grey;
+    color: $black;
+    transition: all 0.2s ease-in;
+
+    &.active {
+      background-color: $darkRed;
+      color: $white;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    @media (max-width: $tablet) {
+      margin: 0 0 25px;
+
+    }
+
+    @media (max-width: $mobile) {
+      padding: 0;
+      margin: 0 0 14px;
+    }
+  }
+
+  &__toggler {
+    display: flex;
+    color: inherit;
+    flex-direction: column;
+    font-family: $mossport;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 2.8rem 2.2rem 2.9rem 2.5rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+
+    background-color: transparent;
+
+    @media (max-width: $tablet) {
+      font-size: 28px;
+      text-align: left;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 16px;
+      padding: 14px 16px 13px;
+      line-height: 1.4;
+      text-align: left;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    display: flex;
+    width: 3.2rem;
+    height: 3.2rem;
+
+
+    svg {
+      align-self: center;
+      transition: .2s transform ease-in-out;
+      width: 5rem;
+      height: 5rem;
+    }
+
+    @media (max-width: $tablet) {
+      width: 40px;
+      height: 40px;
+      margin: 0 0 0 50px;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0px 0 0 10px;
+      width: 18px;
+      height: 18px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+
+  &__content {
+    font-family: $gotham;
+    color: $white;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    text-align: left;
+    text-transform: none;
+    max-width: 80rem;
+    margin: 0;
+
+    @media (max-width: $tablet) {
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      padding: 15px;
+    }
+
+    &.active {
+      max-height: 30rem;
+      opacity: 1;
+      padding: 1rem 0 0;
+    }
+  }
+
+}

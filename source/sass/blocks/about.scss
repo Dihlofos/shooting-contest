@@ -1,0 +1,71 @@
+.about {
+  position: relative;
+  z-index: 6;
+  padding: 14rem 0 13rem;
+
+  .container {
+    position: relative;
+  }
+
+  &__title {
+    padding: 2.4rem 0 0;
+    line-height: 1;
+    margin: 0 0 3rem;
+  }
+
+  &__content {
+    position: relative;
+    width: 50%;
+    z-index: 7;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    padding-right: 1.9rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+    line-height: 1.4;
+
+    span {
+      color: $darkRed;
+    }
+  }
+  &__images {
+    position: relative;
+    width: 51.8rem;
+    height: 45.1rem;
+  }
+
+  &__image {
+    position: absolute;
+    border-radius: 20px;
+
+    &--right {
+      top: 0;
+      right: 0;
+    }
+
+    &--left {
+      bottom: 0;
+      left: 0;
+    }
+
+  }
+
+  &__decor-left {
+    position: absolute;
+    left: -32.5rem;
+    top: 29.5rem;
+  }
+
+  &__decor-right {
+    position: absolute;
+    right: -35rem;
+    bottom: -43.2rem;
+  }
+
+}

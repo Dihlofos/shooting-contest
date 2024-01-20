@@ -1,0 +1,166 @@
+.programm-block {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  padding: 3.4rem 4rem 4rem 4rem;
+  background-color: $white;
+  border-radius: 20px;
+  color: $black;
+  margin: 0 0 1.6rem;
+  min-height: 30rem;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 51.3%;
+  }
+
+  &__right {
+    padding: 2rem 0 0;
+    width: 48.7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__bullits {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__bullit {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 3.4rem;
+    }
+
+    &--half {
+      width: 50%;
+
+      &:not(:last-child) {
+        margin-bottom: 4.5rem;
+      }
+    }
+  }
+
+  &__bullit-name {
+    font-family: $mossport;
+    text-transform: uppercase;
+    color: $darkRed;
+    font-size: 2.4rem;
+    line-height: 1;
+    margin: 0 0 1.3rem;
+
+    span {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__bullit-description {
+    font-size: 1.6rem;
+
+    p {
+      margin: 0 0 1.2rem;
+    }
+
+  }
+
+  &__header {
+    font-family: $mossport;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0 0 0.5rem;
+    line-height: 1;
+    font-size: 4.6rem;
+
+    span {
+      display: inline-block;
+      margin-right: 0.5rem;
+      font-size: 6.4rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 2.4rem;
+    color: $darkRed;
+  }
+
+  &__dates {
+    font-family: $mossport;
+    font-size: 2.8rem;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $purpler;
+
+    &--big {
+      font-size: 3.2rem;
+    }
+
+    &--big-bottom {
+      margin-bottom: 2.2rem;
+    }
+
+    &:not(:last-child) {
+      margin: 0 0 1rem;
+    }
+  }
+
+  &__date-name {
+    margin: 0 0 2rem;
+  }
+
+  &__date-item {
+    &--table {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      span:first-child {
+        position: relative;
+        width: 10.9rem;
+
+        &:after {
+          content: "|";
+          position: absolute;
+          right: 0;
+          top: -0.4rem;
+        }
+      }
+    }
+
+    &--table-small {
+      span:first-child {
+        width: 8.6rem;
+      }
+
+    }
+  }
+
+  &__paragraphs {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-top: -0.5rem;
+    padding: 0 5rem 0 0;
+
+    p {
+      margin: 0 0 1.1rem;
+    }
+
+    &--small {
+      padding: 0 4rem 0 0;
+    }
+  }
+
+
+
+
+}
