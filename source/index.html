@@ -989,7 +989,8 @@
             <h2 class="map__title title">Локация</h2>
             <div class="map__wrapper">
               <div class="map__map">
-                <img width="1180" height="520" src="img/map.jpg" alt="Карта">
+                <img class="map__map-image map__map-image--desktop" width="1180" height="520" src="img/map.jpg" alt="Карта">
+                <img class="map__map-image map__map-image--mobile" width="343" height="400" src="img/map-mobile.jpg" alt="Карта">
                 <button class="map__pin map__pin--1 js-pin map__pin--mobile" data-pin="1">
                   <span class="map__number">1</span>
                   <div class="map__content">
@@ -1005,19 +1006,23 @@
                 <button class="map__pin map__pin--2 js-pin map__pin--mobile" data-pin="2">
                   <span class="map__number">2</span>
                   <div class="map__content">
-                    <span>Место проведения соревнований</span>
+                    <span>Место проведения <i>соревнований</i></span>
                   </div>
                 </button>
                 <a href="#run" class="map__pin map__pin--2 js-pin js-scroll map__pin--desktop" data-pin="2">
                   <span class="map__number">2</span>
                   <div class="map__content">
-                    <span>Место проведения соревнований</span>
+                    <span>Место проведения <i>соревнований</i></span>
                   </div>
                 </a>
-                <div class="map__legend">
+                <div class="map__legend map__legend--desktop">
                   <div class="map__legend-title">адрес</div>
                   <div class="map__legent-descr">Спортинг клуб &laquo;Румянцево&raquo;, г. Москва, поселение Московский, квартал &#8470;&nbsp;4, д.&nbsp;2, стр.&nbsp;10</div>
                 </div>
+              </div>
+              <div class="map__legend map__legend--mobile">
+                <div class="map__legend-title">адрес</div>
+                <div class="map__legent-descr">Спортинг клуб &laquo;Румянцево&raquo;, г. Москва, поселение Московский, квартал &#8470;&nbsp;4, д.&nbsp;2, стр.&nbsp;10</div>
               </div>
             </div>
           </div>

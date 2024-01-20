@@ -2,35 +2,47 @@
   padding: 11.4rem 0 0;
 
   @media (max-width: $mobile) {
-    padding: 96px 0 0;
-
-    .container {
-      padding:0;
-    }
+    padding: 4rem 0 0;
   }
 
   &__title {
     margin: 0 0 3.8rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 2.5rem;
+    }
+
+    @media (min-width: 500px) {
+      text-align: center;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: center;
 
-    &::-webkit-scrollbar {
-      -webkit-appearance: none;
-      width: 0;
-      height: 0;
-      display: none;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: center;
+
+    }
+  }
+
+  &__map-image {
+    &--desktop {
+      display: block;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
 
-    @media (max-width: $mobile) {
-      justify-content: flex-start;
-      overflow-x: auto;
-      width: 100%;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+    &--mobile {
+      display: none;
 
+      @media (max-width: $mobile) {
+        display: block;
+      }
     }
   }
 
@@ -41,25 +53,13 @@
     border-radius: 20px;
     overflow: hidden;
 
-    @media (max-width:$tablet) {
-      margin: 0;
-      width: 728px;
-      height: 466px;
-
-      img {
-        max-width: initial;
-        width: 728px;
-        height: 466px;
-      }
-    }
-
     @media (max-width: $mobile) {
-      width: 600px;
-      height: 384px;
+      width: 34.3rem;
+      height: 40rem;
+
       img {
-        max-width: initial;
-        width: 600px;
-        height: 384px;
+        width: 34.3rem;
+        height: 40rem;
       }
 
     }
@@ -106,6 +106,12 @@
       animation-timing-function: linear;
       animation-iteration-count: infinite;
       z-index: 1;
+
+      @media(max-width: $mobile) {
+        width: 3rem;
+        height: 3rem;
+        top: 0.6rem;
+      }
     }
 
     &.open {
@@ -114,25 +120,25 @@
       }
     }
 
-    @media (max-width: $mobile) {
-      height: 20px;
-
-      &:after {
-        top: 0;
-        left: 0;
-        width: 20px;
-        height: 20px;
-      }
-    }
 
     &--1 {
       top: 14%;
       left: 15.5%;
+
+      @media (max-width: $mobile) {
+        top: 18%;
+        left: 19.5%;
+      }
     }
 
     &--2 {
       top: 81.5%;
       left: 26.5%;
+
+      @media (max-width: $mobile) {
+        top: 70.5%;
+        left: 30.5%;
+      }
     }
   }
 
@@ -148,17 +154,52 @@
     height: 22rem;
     border-radius: 20px;
     padding: 2.2rem 3.2rem 3.2rem 3.2rem;
+
+    @media (max-width: $mobile) {
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 2rem;
+      box-shadow: 0px 0px 30px 0px rgba(31, 31, 31, 0.06);
+      width: 34.3rem;
+      height: auto;
+    }
+
+    &--desktop {
+      display: block;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @media (max-width: $mobile) {
+        display: block;
+      }
+    }
   }
 
   &__legend-title {
     font-family: $mossport;
     text-transform: uppercase;
     font-size: 3.2rem;
+
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+      margin: 0 0 1.6rem;
+    }
   }
 
   &__legent-descr {
     font-size: 1.6rem;
     line-height: 1.4;
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+    }
   }
 
   &__number {
@@ -178,11 +219,10 @@
     flex-shrink: 0;
     background-color: $midRed;
 
-    @media (max-width: $mobile) {
-      font-size: 12px;
-      width: 20px;
-      height: 20px;
-      border-radius: 5px;
+    @media(max-width: $mobile) {
+      width: 3rem;
+      height: 3rem;
+      font-size: 2rem;
     }
   }
 
@@ -208,13 +248,19 @@
     color: $white;
     font-weight: 700;
 
-    @media (max-width: $mobile) {
-      height: 20px;
-      padding: 0 10px 0 25px;
-      transform-origin: 5px 0;
-      font-size: 8px;
-      line-height: 1;
+    i {
+      font-style: normal;
+    }
 
+    @media (max-width: $mobile) {
+      height: 3rem;
+      top: 0.6rem;
+      padding: 0 2.1rem 0 3.3rem;
+      font-size: 1.4rem;
+
+      i {
+        display: none;
+      }
     }
 
     span {
