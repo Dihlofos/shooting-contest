@@ -3,6 +3,10 @@
   z-index: 5;
   background-color: $purpler;
 
+  @media (max-width: $mobile) {
+    padding: 7rem 0 17.3rem;
+  }
+
   &__content {
     position: absolute;
     color: $white;
@@ -10,6 +14,14 @@
     top: 12.2rem;
     left: 0;
     width: auto;
+
+    @media (max-width: $mobile) {
+      position: relative;
+      top: 0;
+      z-index: 4;
+      padding: 3.4rem 0 0;
+      width: 100%;
+    }
   }
 
   .container {
@@ -20,13 +32,24 @@
   }
 
   &__descr {
+    display: flex;
+    justify-content: space-between;
     margin: 0 0 5.8rem;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin: 0 0 3.3rem;
+    }
   }
 
   &__logos {
     display: flex;
     gap: 2.7rem;
     margin: 0 0 6.3rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 5.8rem;
+    }
   }
 
   &__start-text {
@@ -36,17 +59,24 @@
     line-height: 1.4;
     color: $darkRed;
     margin: 0 0 2rem;
+
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+    }
   }
 
   &__location {
     font-size: 1.6rem;
     line-height: 1.4;
+
+    @media (max-width: $mobile) {
+      font-family: $mossport;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
   }
 
-  &__descr {
-    display: flex;
-    justify-content: space-between;
-  }
+
 
 
   &__sports {
@@ -62,6 +92,16 @@
       font-style: normal;
       margin: 0 1.6rem;
     }
+
+    @media (max-width: $mobile) {
+      font-family: $mossport;
+      font-size: 1.8rem;
+      margin: 0 0 3.3rem;
+
+      i {
+        margin: 0 1.78rem;
+      }
+    }
   }
 
   &__main-title {
@@ -71,11 +111,53 @@
     text-transform: uppercase;
     line-height: 1;
     margin-bottom: 1.5rem;
+
+    @media (max-width: $mobile) {
+      font-size: 4.8rem;
+      margin: 0 0 1rem;
+    }
+  }
+
+  &__mobile-decor {
+    display: none;
+    position: absolute;
+    top: 6.5rem;
+    right: -6.2rem;
+
+    @media (max-width: $mobile) {
+      display: block;
+    }
   }
 
   &__bg {
     margin: 0 0 -27.2rem 6rem;
     max-width: initial;
     width: 135%;
+
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
+
+    @media (max-width: $mobile) {
+      position: absolute;
+      bottom: -23.2rem;
+      left: 66%;
+      width: 61.3rem;
+      max-width: initial;
+      margin: 0;
+      transform: translateX(-50%);
+      z-index: 2;
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+      }
+    }
   }
 }

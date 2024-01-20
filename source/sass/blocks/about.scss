@@ -3,6 +3,10 @@
   z-index: 6;
   padding: 14rem 0 13rem;
 
+  @media (max-width: $mobile) {
+    padding: 4.5rem 0 6rem;
+  }
+
   .container {
     position: relative;
   }
@@ -11,12 +15,22 @@
     padding: 2.4rem 0 0;
     line-height: 1;
     margin: 0 0 3rem;
+
+    @media (max-width: $mobile) {
+      font-size: 3.2rem;
+      line-height: 1.1;
+      margin: 0 0 2.6rem;
+    }
   }
 
   &__content {
     position: relative;
     width: 50%;
     z-index: 7;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
   }
 
   &__wrapper {
@@ -24,11 +38,22 @@
     justify-content: space-between;
     gap: 4rem;
     padding-right: 1.9rem;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      padding-right: 0;
+      gap: 2rem;
+    }
   }
 
   &__text {
     font-size: 2rem;
     line-height: 1.4;
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+      line-height: 1.4;
+    }
 
     span {
       color: $darkRed;
@@ -38,6 +63,15 @@
     position: relative;
     width: 51.8rem;
     height: 45.1rem;
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      max-width: 47rem;
+      margin: 0 auto;
+    }
   }
 
   &__image {
@@ -54,6 +88,22 @@
       left: 0;
     }
 
+    @media (max-width: $mobile) {
+      position: relative;
+      width: 25.9rem;
+      height: 16.7rem;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+
+      &--right {
+        align-self: flex-end;
+        margin-bottom: -2rem;
+      }
+
+
+    }
+
   }
 
   &__decor-left {
@@ -66,6 +116,13 @@
     position: absolute;
     right: -35rem;
     bottom: -43.2rem;
+
+    @media (max-width: $mobile) {
+      width: 13.8rem;
+      height: 13.8rem;
+      right: -5rem;
+      bottom: -21.2rem;
+    }
   }
 
 }

@@ -1,8 +1,16 @@
 .partners {
   padding: 4.8rem 0 5rem;
 
+  @media (max-width: $mobile) {
+    padding: 6.5rem 0 5rem;
+  }
+
   &__title {
     margin: 0 0 5rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 2.2rem;
+    }
   }
 
   &__link {
@@ -13,6 +21,43 @@
     &:hover {
       color: $darkPurple;
     }
+
+    @media (max-width: $mobile) {
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      &--dep {
+        width: 17.8rem;
+        height: 6rem;
+      }
+
+      &--mossport {
+        width: 19.8rem;
+        height: 6rem;
+      }
+
+      &--federation{
+        width: 20.9rem;
+        height: 5.5rem;
+      }
+
+      &--sportclub{
+        width: 21.7rem;
+        height: 5.4rem;
+      }
+
+      svg {
+        width: 100%;
+
+      }
+
+      &:hover {
+        color: $logos;
+      }
+    }
+
   }
 
   &__top {
@@ -20,11 +65,27 @@
     justify-content: flex-start;
     gap: 16.8rem;
     margin: 0 0 7rem;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3.3rem;
+      margin: 0 0 2.7rem;
+    }
+
   }
 
   &__bottom {
     display: flex;
     justify-content: flex-end;
     gap: 15.2rem;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3.3rem;
+    }
   }
 }

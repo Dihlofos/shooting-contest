@@ -10,11 +10,29 @@
   margin: 0 0 1.6rem;
   min-height: 30rem;
 
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    min-height: initial;
+    padding: 1.6rem 2rem;
+  }
+
   &__left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 51.3%;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &--mobile-column {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
   }
 
   &__right {
@@ -23,6 +41,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
   }
 
   &__bullits {
@@ -35,6 +57,10 @@
 
     &:not(:last-child) {
       margin-bottom: 3.4rem;
+
+      @media (max-width: $mobile) {
+        margin-bottom: 1rem;
+      }
     }
 
     &--half {
@@ -42,6 +68,10 @@
 
       &:not(:last-child) {
         margin-bottom: 4.5rem;
+
+        @media (max-width: $mobile) {
+          margin-bottom: 1rem;
+        }
       }
     }
   }
@@ -54,6 +84,11 @@
     line-height: 1;
     margin: 0 0 1.3rem;
 
+    @media (max-width: $mobile) {
+      font-size: 1.8rem;
+      margin: 0 0 0.8rem;
+    }
+
     span {
       font-size: 1.6rem;
     }
@@ -61,6 +96,10 @@
 
   &__bullit-description {
     font-size: 1.6rem;
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+    }
 
     p {
       margin: 0 0 1.2rem;
@@ -83,6 +122,15 @@
       margin-right: 0.5rem;
       font-size: 6.4rem;
     }
+
+    @media (max-width: $mobile) {
+      font-size: 2.4rem;
+      margin: 0;
+
+      span {
+        font-size: 3.6rem;
+      }
+    }
   }
 
   &__subtitle {
@@ -97,8 +145,22 @@
     text-transform: uppercase;
     color: $purpler;
 
+    @media (max-width: $mobile) {
+      font-size: 1.8rem;
+
+      .programm-block__left--mobile-column & {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
     &--big {
       font-size: 3.2rem;
+
+      @media (max-width: $mobile) {
+        font-size: 1.8rem;
+      }
     }
 
     &--big-bottom {
@@ -112,6 +174,10 @@
 
   &__date-name {
     margin: 0 0 2rem;
+
+    @media(max-width: $mobile) {
+      margin: 0;
+    }
   }
 
   &__date-item {
@@ -128,6 +194,10 @@
         position: relative;
         width: 14rem;
 
+        @media (max-width: $mobile) {
+          width: 10.6rem;
+        }
+
         &:after {
           content: "|";
           position: absolute;
@@ -140,6 +210,10 @@
     &--table-small {
       span:first-child {
         width: 8.6rem;
+
+        @media (max-width: $mobile) {
+          width: 6rem;
+        }
       }
 
     }
@@ -150,6 +224,11 @@
     line-height: 1.4;
     margin-top: -0.5rem;
     padding: 0 5rem 0 0;
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+      padding: 0;
+    }
 
     p {
       margin: 0 0 1.1rem;

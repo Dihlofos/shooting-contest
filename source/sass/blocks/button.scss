@@ -35,9 +35,9 @@
     }
 
     @media (max-width: $mobile) {
-      font-size: 18px;
-      padding: 11px;
-      height: 45px;
+      font-size: 2rem;
+      padding: 1.1rem;
+      height: 6rem;
     }
 
     &--white {
@@ -57,7 +57,7 @@
       }
 
       @media (max-width: $tablet) {
-        font-size: 18px;
+        font-size: 1.8rem;
       }
     }
 
