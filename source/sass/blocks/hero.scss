@@ -49,7 +49,8 @@
   &__descr {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 5.8rem;
+    //margin: 0 0 5.8rem;
+    margin: 0 0 6.4rem;
 
     @media (max-width: $tablet) {
       margin: 0 0 2.3rem;
@@ -261,6 +262,70 @@
     }
 
 
+
+  }
+
+
+  &__register {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    gap: 2rem;
+    margin-left: -2rem;
+
+    .button {
+      position: relative;
+      z-index: 2;
+      height: 5rem;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 2000rem;
+      height: 100%;
+      background-color: $darkRed;
+      z-index: 1;
+      border-radius: 20px;
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+      font-family: $mossport;
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+    @media (max-width: $tablet) {
+      gap: 2rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+  }
+
+  &__prize {
+    position: relative;
+    z-index: 2;
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1;
+
+    @media (max-width: $mobile) {
+      font-size: 2.4rem;
+    }
 
   }
 }

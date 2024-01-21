@@ -61,6 +61,7 @@ $(document).ready(function () {
       },
     },
   });
+
   $(".open-popup").click(function (e) {
     e.preventDefault();
     $('select option:contains("' + $(this).attr("data-type-sport") + '")').prop(
@@ -85,6 +86,12 @@ $(document).ready(function () {
     }
     return false;
   });
+
+  const formOpenParam = window.location.search.split("?")?.[1];
+
+  if (formOpenParam && formOpenParam === "registerForm") {
+    $(".open-popup").magnificPopup("open");
+  }
 });
 
 (function () {
