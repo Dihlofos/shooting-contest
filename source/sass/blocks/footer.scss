@@ -2,6 +2,10 @@
   padding: 13.9rem 0 0;
   color: $white;
 
+  @media (max-width: $tablet) {
+    padding: 8.3rem 0 0;
+  }
+
   @media (max-width: $mobile) {
     padding: 7rem 0 0;
   }
@@ -22,6 +26,10 @@
     border-top-right-radius: 36px;
     background-color: $darkPurple;
 
+    @media (max-width: $tablet) {
+      padding: 3.7rem 0 5rem;
+    }
+
     @media (max-width: $mobile) {
       border-top-left-radius: 24px;
       border-top-right-radius: 24px;
@@ -30,6 +38,10 @@
   }
 
   &__social-links {
+
+    @media (max-width: $tablet) {
+      width: 130%;
+    }
 
     @media (max-width: $mobile) {
       display: flex;
@@ -55,6 +67,10 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 0 6rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 5rem;
+    }
 
     @media (max-width: $mobile) {
       flex-direction: column;
@@ -97,6 +113,10 @@
   &__right {
     width: 48%;
 
+    @media (max-width: $tablet) {
+      width: 47%;
+    }
+
     @media (max-width: $mobile) {
       width: 100%;
     }
@@ -109,6 +129,15 @@
     padding: 1.2rem 0 0;
 
     @media (max-width: $mobile) {
+      width: 124%;
+      position: relative;
+      left: -24%;
+      gap: 2.7rem;
+    }
+
+    @media (max-width: $mobile) {
+      left: 0;
+      width: 100%;
       gap: 2rem;
     }
   }
@@ -118,6 +147,11 @@
     font-size: 1.4rem;
     line-height: 1;
     margin: 0 0 0.5rem;
+
+    @media (max-width: $tablet) {
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+    }
 
     @media (max-width: $mobile) {
       font-size: 1.2rem;
@@ -131,6 +165,10 @@
     text-decoration: none;
     color: $white;
     font-weight: 400;
+
+    @media (max-width: $tablet) {
+      font-size: 1.8rem;
+    }
 
     @media (max-width: $mobile) {
       font-size: 1.8rem;
@@ -153,6 +191,22 @@
 
     p {
       margin: 0 0 3.5rem;
+    }
+
+    @media (max-width: $tablet) {
+      margin-top: 3.3rem;
+      line-height: 1.4;
+      p {
+        margin: 0;
+      }
+
+      p:not(:last-child) {
+        margin: 0 0 1.3rem;
+      }
+
+      li {
+        margin: 0 0 0.2rem;
+      }
     }
 
     @media (max-width: $mobile) {
@@ -179,6 +233,10 @@
     text-decoration: none;
     transition: 0.2s color ease-in;
     margin-top: 2.5rem;
+
+    @media (max-width: $tablet) {
+      font-size: 1.2rem;
+    }
 
     @media (max-width: $mobile) {
       font-size: 1.2rem;

@@ -5,6 +5,10 @@
   overflow: hidden;
   margin-top: -4rem;
 
+  @media (max-width: $tablet) {
+    padding: 8rem 0 26.3rem;
+  }
+
   @media (max-width: $mobile) {
     background-color: $purpler;
     padding: 4.8rem 0 8rem;
@@ -26,6 +30,13 @@
     border-radius: 50%;
     background-color: $purpler;
 
+    @media (max-width: $tablet) {
+      width: 368%;
+      height: 324rem;
+      bottom: 9.1rem;
+      left: -133.5%;
+    }
+
     @media (max-width: $mobile) {
       display: none;
     }
@@ -35,18 +46,40 @@
     position: absolute;
     left: -25.6rem;
     top: -6.7rem;
+
+    @media (max-width: $tablet) {
+      width: 10.2rem;
+      height: 10.2rem;
+      left: -6.1rem;
+      top: -1.7rem;
+
+    }
   }
 
   &__decor-right {
     position: absolute;
     bottom: -27.5rem;
     right: -20rem;
+
+    @media (max-width: $tablet) {
+      bottom: -18.5rem;
+      right: -23rem;
+    }
+
+    @media (max-width: $mobile) {
+      bottom: -27.5rem;
+      right: -20rem;
+    }
   }
 
   &__title {
     color: $white;
     text-align: center;
     margin: 0 0 3.5rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 2.7rem;
+    }
 
     @media (max-width: $mobile) {
       margin: 0 0 2rem;
@@ -78,6 +111,11 @@
     width: 24rem;
     height: 24rem;
 
+    @media (max-width: $tablet) {
+      width: 16rem;
+      height: 16rem;
+    }
+
     @media (max-width: $mobile) {
       width: 20rem;
       height: 20rem;
@@ -101,6 +139,11 @@
     background-color: #fff;
     flex-grow: 1;
 
+    @media (max-width: $tablet) {
+      padding: 2rem;
+      height: 16rem;
+    }
+
     @media (max-width: $mobile) {
       padding: 0;
       height: auto;
@@ -111,6 +154,13 @@
     position: absolute;
     right: 3rem;
     bottom: 3.6rem;
+
+    @media (max-width: $tablet) {
+      width: 2.4rem;
+      height: 2.4rem;
+      right: 2rem;
+      bottom: 3rem;
+    }
 
     @media (max-width: $mobile) {
       bottom: auto;
@@ -124,6 +174,10 @@
     margin: 0 0 1.1rem;
     line-height: 1;
 
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+    }
+
     @media (max-width: $mobile) {
       font-size: 2rem;
       margin: 0 0 0.5rem;
@@ -135,6 +189,10 @@
     line-height: 1.4;
     max-width: 37.6rem;
 
+    @media (max-width: $tablet) {
+      font-size: 1.4rem
+    }
+
     @media (max-width: $mobile) {
       font-size: 1.4rem;
     }
@@ -143,6 +201,10 @@
   &__position {
     color: $darkRed;
     font-size: 1.6rem;
+
+    @media (max-width: $tablet) {
+      font-size: 1.4rem
+    }
 
     @media (max-width: $mobile) {
       font-size: 1.4rem;

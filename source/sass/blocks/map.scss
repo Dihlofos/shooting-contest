@@ -1,6 +1,10 @@
 .map {
   padding: 11.4rem 0 0;
 
+  @media (max-width: $tablet) {
+    padding: 1.4rem 0 0;
+  }
+
   @media (max-width: $mobile) {
     padding: 4rem 0 0;
   }
@@ -11,8 +15,6 @@
     @media (max-width: $mobile) {
       margin: 0 0 2.5rem;
     }
-
-
   }
 
   &__wrapper {
@@ -30,6 +32,22 @@
     &--desktop {
       display: block;
 
+      @media (max-width: $tablet) {
+        display: none;
+      }
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+
+    &--tablet {
+      display: none;
+
+      @media (max-width: $tablet) {
+        display: block;
+      }
+
       @media (max-width: $mobile) {
         display: none;
       }
@@ -37,6 +55,10 @@
 
     &--mobile {
       display: none;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
 
       @media (max-width: $mobile) {
         display: block;
@@ -51,6 +73,16 @@
     border-radius: 20px;
     overflow: hidden;
 
+    @media (max-width: $tablet) {
+      width: 67.2rem;
+      height: 70rem;
+
+      img {
+        width: 67.2rem;
+        height: 70rem;
+      }
+    }
+
     @media (max-width: $mobile) {
       width: 34.3rem;
       height: 40rem;
@@ -59,7 +91,6 @@
         width: 34.3rem;
         height: 40rem;
       }
-
     }
   }
 
@@ -123,6 +154,11 @@
       top: 14%;
       left: 15.5%;
 
+      @media (max-width: $tablet) {
+        top: 21.5%;
+        left: 15%;
+      }
+
       @media (max-width: $mobile) {
         top: 18%;
         left: 19.5%;
@@ -132,6 +168,11 @@
     &--2 {
       top: 81.5%;
       left: 26.5%;
+
+      @media (max-width: $tablet) {
+        top: 69.5%;
+        left: 30.5%;
+      }
 
       @media (max-width: $mobile) {
         top: 70.5%;
@@ -153,6 +194,12 @@
     border-radius: 20px;
     padding: 2.2rem 3.2rem 3.2rem 3.2rem;
 
+    @media (max-width: $tablet) {
+      padding: 2.4rem 2rem;
+      width: 27.4rem;
+      height: 15.9rem;
+    }
+
     @media (max-width: $mobile) {
       position: relative;
       top: 0;
@@ -164,7 +211,7 @@
     }
 
     &--desktop {
-      display: block;
+      display: flex;
 
       @media (max-width: $mobile) {
         display: none;
@@ -185,6 +232,10 @@
     text-transform: uppercase;
     font-size: 3.2rem;
 
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+    }
+
     @media (max-width: $mobile) {
       font-size: 2rem;
       margin: 0 0 1.6rem;
@@ -194,6 +245,10 @@
   &__legent-descr {
     font-size: 1.6rem;
     line-height: 1.4;
+
+    @media (max-width: $tablet) {
+      font-size: 1.4rem;
+    }
 
     @media (max-width: $mobile) {
       font-size: 1.4rem;
