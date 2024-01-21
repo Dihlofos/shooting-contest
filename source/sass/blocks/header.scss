@@ -64,6 +64,10 @@
     height: 4.4rem;
     width: 15.8rem;
 
+    //experiment
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+
     &:hover {
       background-color: transparent;
       color: $white;
