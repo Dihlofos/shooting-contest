@@ -26,6 +26,7 @@ $(document).ready(function () {
   });
 
   $("input[name='phone']").mask("+7(999) 999-9999");
+  $("input[name='birthday']").mask("99.99.9999");
   new AirDatepicker("#birthday");
 
   $("#form-popup").submit(function () {
