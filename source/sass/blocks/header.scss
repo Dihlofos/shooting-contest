@@ -48,30 +48,13 @@
   }
 
   &__action {
-    display: flex;
-    justify-content: center;
-    background-color: $white;
-    border: 0.2rem solid $white;
-    font-family: $mossport;
-    transition: 0.2s background-color ease-in, 0.2s color ease-in;
-    border-radius: 10px;
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 0.8rem 2rem;
-    color: $darkRed;
-    text-decoration: none;
-    line-height: normal;
     height: 4.4rem;
     width: 15.8rem;
+    min-width: 15.8rem;
 
     //experiment
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
-
-    &:hover {
-      background-color: transparent;
-      color: $white;
-    }
 
     @media (max-width: $tablet) {
       font-size: 2rem;
