@@ -127,6 +127,10 @@
     max-width: 80rem;
     margin: 0;
 
+    a {
+      color: white;
+    }
+
     @media (max-width: $tablet) {
       font-size: 1.4rem;
     }
@@ -146,6 +150,7 @@
 
       @media (max-width: $mobile) {
         padding: 0.4rem 0 0;
+        max-height: 47rem;
       }
     }
   }
