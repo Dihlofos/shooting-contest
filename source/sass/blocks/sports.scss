@@ -17,8 +17,12 @@
     padding: 4rem 3rem;
     box-shadow: 0px 0px 30px 0px rgba(31, 31, 31, 0.06);
     margin: 0 0 2rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
     line-height: 1.4;
+
+    ul {
+      margin: 0;
+    }
 
     p {
       margin: 0;
@@ -58,6 +62,8 @@
   }
 
   &__button {
+    margin: 0 auto;
+    width: 21rem;
     &:hover {
       background-color: $white;
       color: $darkRed
@@ -131,6 +137,7 @@
     text-transform: uppercase;
     font-size: 4rem;
     margin: 0 0 1rem;
+    text-align: center;
 
     @media (max-width: $tablet) {
       font-size: 2.4rem;
@@ -142,9 +149,13 @@
   }
 
   &__block-text {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     line-height: 1.4;
     margin: 0 0;
+
+    @media (max-width: $tablet) {
+      font-size: 1.4rem;
+    }
 
     p {
       margin: 0 0 1.4rem;
@@ -154,7 +165,6 @@
   &__warning {
     font-size: 1.6rem;
     line-height: 1.4;
-    max-width: 88rem;
 
     a {
       color: $darkRed;
