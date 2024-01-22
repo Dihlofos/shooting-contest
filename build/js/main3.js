@@ -87,6 +87,13 @@ $(document).ready(function () {
     return false;
   });
 
+  $(".js-back").click(function () {
+    $(".form-step-1").addClass("show");
+    $(".form-step-2").removeClass("show");
+    $('input[type="checkbox"]').attr("required", false);
+    $(".form-popup__title span").text("1/2");
+  });
+
   const formOpenParam = window.location.search.split("?")?.[1];
 
   if (formOpenParam && formOpenParam === "registerForm") {

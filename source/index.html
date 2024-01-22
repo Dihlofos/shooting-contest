@@ -51,16 +51,19 @@
                 <span>1/2</span>
             </div>
             <div class="form-popup__scroll form-step-1 show">
-                <div class="form-popup__select">
-                    <select name="type-sport" id="">
-                        <option value="Скит">Скит</option>
-                        <option value="Трап">Трап</option>
-                        <option value="Любители-охотники. Спортинг-компакт">Любители-охотники. Спортинг-компакт</option>
-                        <option value="Спортинг-компакт">Спортинг-компакт</option>
-                    </select>
-                </div>
-                <div>
-                  <input type="text" placeholder="Фамилия" name="lastname" required>
+              <div>
+                Регистрация — с 29.01 по 20.02.2024
+              </div>
+              <div class="form-popup__select">
+                  <select name="type-sport" id="">
+                      <option value="Скит">Скит</option>
+                      <option value="Трап">Трап</option>
+                      <option value="Любители-охотники. Спортинг-компакт">Любители-охотники. Спортинг-компакт</option>
+                      <option value="Спортинг-компакт">Спортинг-компакт</option>
+                  </select>
+              </div>
+              <div>
+                <input type="text" placeholder="Фамилия" name="lastname" required>
               </div>
                 <div>
                     <input type="text" placeholder="Имя" name="name" required>
@@ -78,9 +81,19 @@
                 <div>
                   <input type="text" placeholder="Город" name="city" required>
               </div>
-                <div>
-                    <input type="text" placeholder="Спортивный разряд" name="sport" required>
-                </div>
+                <div class="form-popup__select">
+                  <select name="sport" id="" required>
+                      <option selected value="" disabled hidden >Спортивный разряд</option>
+                      <option value="ЗМС">ЗМС</option>
+                      <option value="МСМК">МСМК</option>
+                      <option value="МС">МС</option>
+                      <option value="КМС">КМС</option>
+                      <option value="1 разряд">1 разряд</option>
+                      <option value="2 разряд">2 разряд</option>
+                      <option value="3 разряд">3 разряд</option>
+                      <option value="Без разряда">Без разряда</option>
+                  </select>
+              </div>
                 <div>
                     <input type="text" id="birthday" placeholder="Дата рождения" name="birthday" required readonly>
                 </div>
@@ -90,7 +103,7 @@
                 <div>
                     <input type="email" placeholder="E-mail" name="email" required>
                 </div>
-                <div>
+                <div class="margin-bottom">
                     <input type="text" placeholder="Марка и номер автомобиля (при необходимости)" name="auto">
                     <span class="form-popup__small-text">
                         для парковки на площадке проведения
@@ -137,6 +150,10 @@
                     <input class="custom-checkbox" type="checkbox" id="agree4" name="agree4" >
                     <label for="agree4">Я даю согласие на использование своих фото и видеоматериалов</label>
                 </div>
+
+                <div class="form-popup__btn form-popup__btn--small js-back">
+                  <button type="button" >Назад</button>
+              </div>
 
                 <div class="form-popup__btn">
                     <button type="submit" value="Отправить заявку">Отправить заявку</button>

@@ -201,7 +201,6 @@ button.mfp-close{
         border-radius: 10px;
         background: #E62E3E;
         color: #FFF;
-
         text-align: center;
         font-family: Mossport;
         font-size: 30px;
@@ -213,10 +212,19 @@ button.mfp-close{
         outline: none;
         width: 100%;
         border: none;
-        margin-top: 40px;
+        margin-top: 0;
       }
+
+      div.margin-bottom {
+        margin-bottom: 40px !important;
+      }
+
       .form-popup__btn button:hover{
         cursor: pointer;
+      }
+
+      .form-popup__btn--small button {
+        background: #342983
       }
 
       .air-datepicker-global-container {
