@@ -26,8 +26,9 @@
 
     &:hover,
     &:active {
+        border-color: $purpler;
         background-color: $purpler;
-        color: $darkRed;
+        color: $white;
     }
 
     @media (max-width: $tablet) {
@@ -56,6 +57,29 @@
 
           @media (max-width: $tablet) {
             background-color: $white;
+            color: $darkRed;
+          }
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &--white-red {
+      background-color: $white;
+      border-color: $darkRed;
+      color: $darkRed;
+
+      &:hover,
+      &:active {
+        border-color: $darkRed;
+        background-color: $darkRed;
+        color: $white;
+
+          @media (max-width: $tablet) {
+            background-color: $white;
+            border-color: $darkRed;
             color: $darkRed;
           }
       }
