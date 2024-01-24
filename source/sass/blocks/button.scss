@@ -24,6 +24,12 @@
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 
+    &:disabled {
+      background-color: #B0B0B0;
+      border-color: #B0B0B0;
+      cursor: not-allowed;
+    }
+
     &:hover,
     &:active {
         border-color: $purpler;

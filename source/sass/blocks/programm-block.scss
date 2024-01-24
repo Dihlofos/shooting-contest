@@ -11,13 +11,23 @@
   min-height: 30rem;
 
   @media (max-width: $tablet) {
-    padding: 1.7rem 3rem 2rem;
+    padding: 2rem 2rem 2rem 3rem;
+    min-height: 27.2rem;
   }
 
   @media (max-width: $mobile) {
     flex-direction: column;
     min-height: initial;
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 2rem 14.6rem 2rem;
+
+    &--no-registration {
+      padding: 1.6rem 2rem 10.6rem 2rem;
+      .programm-block__buttons {
+        .button {
+          width: 100%;
+        }
+      }
+    }
   }
 
   &__left {
@@ -27,7 +37,7 @@
     width: 51.3%;
 
     @media (max-width: $tablet) {
-      width: 37.3%;
+      width: 54.3%;
     }
 
     @media (max-width: $mobile) {
@@ -39,6 +49,47 @@
       &--mobile-column {
         flex-direction: column;
         gap: 2rem;
+      }
+    }
+  }
+
+  &__buttons {
+    position: relative;
+    padding-top: 2rem;
+
+    span {
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+    }
+
+    @media (max-width: $tablet) {
+      display: flex;
+      gap: 1rem;
+
+      .button {
+        font-size: 2rem;
+        width: 13.5rem;
+        padding: 1rem;
+        height: 5rem;
+        min-width: unset;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      position: absolute;
+      width: calc(100% - 3.6rem);
+      bottom: 2rem;
+      left: 2rem;
+
+      .button {
+        width: 50%;
+      }
+
+      span {
+        display: block;
+        width: 100%;
+        text-align: center;
       }
     }
   }
@@ -67,12 +118,27 @@
 
     @media (max-width: $tablet) {
       padding: 1rem 0 0;
-      width: 62%;
+      width: 49%;
     }
 
     @media (max-width: $mobile) {
       width: 100%;
-      padding: 2rem 0 0;
+      padding: 4rem 0 0;
+
+      &--big-padding {
+        padding: 4rem 0 0;
+
+        .programm-block__bullits {
+          margin: 0 0 2rem;
+        }
+      }
+
+      &--big-margin {
+        .programm-block__bullits {
+          margin: 0 0 2rem;
+        }
+
+      }
     }
   }
 
@@ -80,6 +146,14 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 0 6.5rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 4.5rem;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 2rem;
+    }
   }
 
   &__bullit {
@@ -89,11 +163,11 @@
       margin-bottom: 2.6rem;
 
       @media (max-width: $tablet) {
-        margin-bottom: 1.4rem;
+        margin-bottom: 2.4rem;
       }
 
       @media (max-width: $mobile) {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
       }
     }
 
@@ -157,6 +231,13 @@
   &__header {
     font-family: $mossport;
     text-transform: uppercase;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
   }
 
   &__title {
@@ -191,6 +272,14 @@
   &__subtitle {
     font-size: 2.6rem;
     color: $purpler;
+
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.8rem;
+    }
   }
 
   &__dates {

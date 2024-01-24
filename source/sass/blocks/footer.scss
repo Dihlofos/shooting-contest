@@ -37,20 +37,51 @@
     }
   }
 
-  &__social-links {
+  &__right-socials {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 
     @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0 4.8rem;
+    }
+  }
+
+  &__social-links-wrapper {
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
       width: 130%;
     }
 
     @media (max-width: $mobile) {
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       width: 100%;
     }
+  }
 
+  &__social-title {
+    font-size: 1.4rem;
+    margin: 0 0 2rem;
+
+    @media (max-width: $tablet) {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
   }
 
   &__social-link {
@@ -67,10 +98,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 0 6rem;
+    margin: 0 0 6.5rem;
 
     @media (max-width: $tablet) {
-      margin: 0 0 5rem;
+      margin: 0 0 6rem;
     }
 
     @media (max-width: $mobile) {
@@ -82,11 +113,15 @@
   &__body {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 8rem;
+    margin: 0 0 9rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 5rem;
+    }
 
     @media (max-width: $mobile) {
       flex-direction: column;
-      margin: 0 0 6rem;
+      margin: 0 0 6.2rem;
 
       .footer__left {
         margin: 0 0 5rem;
@@ -99,7 +134,8 @@
     justify-content: space-between;
 
     @media (max-width: $mobile) {
-      flex-direction: column;
+      flex-direction: column-reverse;
+      padding-bottom: 5rem;
     }
   }
 
@@ -129,7 +165,7 @@
     justify-content: space-between;
     padding: 1.2rem 0 0;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       width: 124%;
       position: relative;
       left: -24%;
@@ -237,9 +273,15 @@
 
     @media (max-width: $tablet) {
       font-size: 1.2rem;
+      margin-top: 7.5rem;
     }
 
     @media (max-width: $mobile) {
+      position: absolute;
+      bottom: 6.2rem;
+      left: 0;
+      text-align: center;
+      width: 100%;
       font-size: 1.2rem;
       justify-content: center;
     }
