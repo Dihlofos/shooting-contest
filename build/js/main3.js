@@ -44,10 +44,11 @@
 })();
 
 $(document).ready(function () {
+  window.sendForm = false;
   $(".open-popup").magnificPopup({
     type: "inline",
     preloader: false,
-    focus: "#name",
+    focus: "#name-form",
 
     // When elemened is focused, some mobile browsers in some cases zoom in
     // It looks not nice, so we disable it:
@@ -56,7 +57,7 @@ $(document).ready(function () {
         if ($(window).width() < 700) {
           this.st.focus = false;
         } else {
-          this.st.focus = "#name";
+          this.st.focus = "#name-form";
         }
       },
     },
@@ -68,6 +69,10 @@ $(document).ready(function () {
       "selected",
       true
     );
+    $('select option:contains("' + $(this).attr("data-step") + '")').prop(
+      "selected",
+      true
+    );
     $(".open-popup").magnificPopup("open");
   });
 
@@ -76,8 +81,20 @@ $(document).ready(function () {
   new AirDatepicker("#birthday");
 
   $("#form-popup").submit(function () {
-    if ($(".form-step-2").hasClass("show")) {
-      console.log("отправка");
+    var form = $(this);
+    if ($(".form-step-2").hasClass("show") && window.sendForm == false) {
+      window.sendForm = true;
+      $.ajax({
+        url: '/send-form.php',
+        data: form.serialize(),
+        processData: false,
+        contentType: false,
+        type: 'POST',
+        dataType: 'JSON',
+        success: function(data) {
+          $('#form-popup > div').html('<div class="form-popup__title">ВАША ЗАЯВКА ОТПРАВЛЕНА</div><div class="form-popup__scroll show"><div>В ближайшее время с вами свяжутся по указанным в форме контактам.</div></div>');
+        }
+      });
     } else {
       $(".form-step-2").addClass("show");
       $(".form-step-1").removeClass("show");
