@@ -250,6 +250,9 @@ button.mfp-close{
         width: 100%;
         max-width: 580px;
     }
+    .form-popup__mt{
+      margin-top: 24px!important;
+    }
 
     @media (max-width: 768px) {
         .form-popup__title{
@@ -263,5 +266,23 @@ button.mfp-close{
         .form-popup__scroll > div{
             margin: 0 12px 0 16px;
             margin-bottom: 12px;
+        }
+        .form-popup__scroll {
+          max-height: calc(100vh - 130px);
+        }
+        .white-popup-block {
+          height: 100%;
+          border-radius: 0;
+          margin: 0;
+        }
+        .mfp-auto-cursor .mfp-content {
+          height: 100%;
+        }
+        .mfp-container {
+          padding: 0;
+        }
+        .mfp-wrap{
+          top: 0!important;
+          position: fixed!important;
         }
     }

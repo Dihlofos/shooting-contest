@@ -38,11 +38,29 @@
 
     <title>Кубок Мэра Москвы по стендовой стрельбе</title>
 
-   </script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(96227856, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+  </script>
+  <!-- /Yandex.Metrika counter -->
 
   </head>
 
   <body>
+      <!-- Yandex.Metrika counter -->
+    <noscript><div><img src="https://mc.yandex.ru/watch/96227856" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <div style="overflow: hidden">
       <form id="form-popup" class="mfp-hide white-popup-block">
         <div>
@@ -51,19 +69,14 @@
                 <span>1/2</span>
             </div>
             <div class="form-popup__scroll form-step-1 show">
-              <div>
-                Регистрация — с 29.01 по 20.02.2024
-              </div>
-              <div class="form-popup__select">
-                  <select name="type-sport" id="">
-                      <option value="Скит">Скит</option>
-                      <option value="Трап">Трап</option>
-                      <option value="Любители-охотники. Спортинг-компакт">Любители-охотники. Спортинг-компакт</option>
-                      <option value="Спортинг-компакт">Спортинг-компакт</option>
-                  </select>
+              <div >
+                <input type="text" name="type-sport" readonly value="Трап">
               </div>
               <div>
-                <input type="text" placeholder="Фамилия" name="lastname" required>
+                <input type="text" name="step" readonly value="1 этап">
+              </div>
+              <div class="form-popup__mt">
+                <input type="text" id="name-form" placeholder="Фамилия" name="lastname" required>
               </div>
                 <div>
                     <input type="text" placeholder="Имя" name="name" required>
@@ -78,10 +91,14 @@
                         <option value="Ж">Жен</option>
                     </select>
                 </div>
-                <div>
-                  <input type="text" placeholder="Город" name="city" required>
+                <div >
+                  <input type="text" id="birthday" placeholder="Дата рождения" name="birthday" required readonly>
               </div>
-                <div class="form-popup__select">
+              <div>
+                <input type="text" placeholder="Город" name="city" required>
+            </div>
+
+                <div class="form-popup__select form-popup__mt">
                   <select name="sport" id="" required>
                       <option selected value="" disabled hidden >Спортивный разряд</option>
                       <option value="ЗМС">ЗМС</option>
@@ -94,16 +111,14 @@
                       <option value="Без разряда">Без разряда</option>
                   </select>
               </div>
-                <div>
-                    <input type="text" id="birthday" placeholder="Дата рождения" name="birthday" required readonly>
-                </div>
-                <div>
+
+                <div class="form-popup__mt">
                     <input type="text" placeholder="Номер телефона" name="phone" required>
                 </div>
                 <div>
                     <input type="email" placeholder="E-mail" name="email" required>
                 </div>
-                <div class="margin-bottom">
+                <div class="margin-bottom form-popup__mt">
                     <input type="text" placeholder="Марка и номер автомобиля (при необходимости)" name="auto">
                     <span class="form-popup__small-text">
                         для парковки на площадке проведения
@@ -211,7 +226,7 @@
                     >
                   </li>
                 </ul>
-                <a href="#form-popup" class="header__action button button--white open-popup">Регистрация</a>
+                <a href="#programm" class="header__action button button--white js-scroll">Регистрация</a>
               </div>
 
               <div class="nav__bottom">
@@ -316,7 +331,7 @@
                   </li>
                 </ul>
               </nav>
-              <a href="#form-popup" class="header__action button button--white open-popup">Регистрация</a>
+              <a href="#programm" class="header__action button button--white js-scroll">Регистрация</a>
             </div>
           </div>
         </header>
@@ -351,7 +366,7 @@
               </div>
               <div class="hero__footer">
                 <div class="hero__register">
-                  <a href="#form-popup" class="button button--white hero__action open-popup" type="button">Регистрация</a>
+                  <a href="#programm" class="button button--white hero__action  js-scroll" type="button">Регистрация</a>
                   <span>Участие бесплатное</span>
                 </div>
                 <div class="hero__prize">Главный приз<br> Автомобиль «Москвич 3»</div>
@@ -415,7 +430,6 @@
                       <p>В&nbsp;Суперфинал попадают 6&nbsp;человек (3&nbsp;мужчины и&nbsp;3&nbsp;женщины по&nbsp;лучшим результатам, включая юниоров).</p>
                     </div>
                   </div>
-
                 </div>
               </div>
               <div class="sports__block">
@@ -427,7 +441,6 @@
                       <p>В&nbsp;Суперфинал попадают 6&nbsp;человек (3&nbsp;мужчины и&nbsp;3&nbsp;женщины по&nbsp;лучшим результатам, включая юниоров).</p>
                     </div>
                   </div>
-
                 </div>
               </div>
               <div class="sports__block">
@@ -439,7 +452,6 @@
                       <p>В&nbsp;Суперфинале соревнуются 6&nbsp;человек, которые показали лучшие результаты в&nbsp;абсолютном зачете.</p>
                     </div>
                   </div>
-
                 </div>
               </div>
               <div class="sports__block">
@@ -484,9 +496,9 @@
                         <div class="programm-block__subtitle">24–25 февраля</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <span>Регистрация с хх.хх. по хх.хх.2024</span>
+                        <span>Регистрация с 29.01 по 22.02.2024</span>
                         <a href="/skit-1.html" class="programm-block__button button button--white-red">Подробнее</a>
-                        <button class="programm-block__button button open-popup">регистрация</button>
+                        <a href="#form-popup" data-type-sport="Скит" data-step="1 этап" class="programm-block__button button open-popup">Регистрация</a>
                       </div>
                     </div>
                     <div class="programm-block__right">
@@ -522,9 +534,9 @@
                         <div class="programm-block__subtitle">23–24 марта</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <span>Регистрация с хх.хх. по хх.хх.2024</span>
+                        <span>Регистрация с 26.02 по 21.03.2024</span>
                         <a href="/skit-2.html" class="programm-block__button button button--white-red">Подробнее</a>
-                        <button class="programm-block__button button open-popup">регистрация</button>
+                        <a href="#form-popup" data-type-sport="Скит" data-step="2 этап" class="programm-block__button button open-popup">Регистрация</a>
                       </div>
                     </div>
                     <div class="programm-block__right">
@@ -551,7 +563,6 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                   <div class="programm-block">
                     <div class="programm-block__left">
@@ -560,9 +571,9 @@
                         <div class="programm-block__subtitle">24-25 мая</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <span>Регистрация с хх.хх. по хх.хх.2024</span>
+                        <span>Регистрация с 25.03 по 22.05.2024</span>
                         <a href="/skit-3.html" class="programm-block__button button button--white-red">Подробнее</a>
-                        <button class="programm-block__button button open-popup">регистрация</button>
+                        <a href="#form-popup" data-type-sport="Скит" data-step="3 этап" class="programm-block__button button open-popup">Регистрация</a>
                       </div>
                     </div>
                     <div class="programm-block__right">
@@ -598,7 +609,7 @@
                         <div class="programm-block__subtitle">25 мая</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <a href="/skit-final.html" class="programm-block__button button button--white-red">Подробнее</a>
+                        <a href="/skit-superfinal.html" class="programm-block__button button button--white-red">Подробнее</a>
                       </div>
                     </div>
                     <div class="programm-block__right programm-block__right--big-padding">
@@ -633,9 +644,9 @@
                         <div class="programm-block__subtitle">24–25 февраля</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <span>Регистрация с хх.хх. по хх.хх.2024</span>
+                        <span>Регистрация с 29.01 по 22.02.2024</span>
                         <a href="/trap-1.html" class="programm-block__button button button--white-red">Подробнее</a>
-                        <button class="programm-block__button button open-popup">регистрация</button>
+                        <a href="#form-popup" data-type-sport="Трап" data-step="1 этап" class="programm-block__button button open-popup">Регистрация</a>
                       </div>
                     </div>
                     <div class="programm-block__right">
@@ -671,9 +682,9 @@
                         <div class="programm-block__subtitle">23–24 марта</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <span>Регистрация с хх.хх. по хх.хх.2024</span>
+                        <span>Регистрация с 26.02 по 21.03.2024</span>
                         <a href="/trap-2.html" class="programm-block__button button button--white-red">Подробнее</a>
-                        <button class="programm-block__button button open-popup">регистрация</button>
+                        <a href="#form-popup" data-type-sport="Трап" data-step="2 этап" class="programm-block__button button open-popup">Регистрация</a>
                       </div>
                     </div>
                     <div class="programm-block__right">
@@ -709,9 +720,9 @@
                         <div class="programm-block__subtitle">24-25 мая</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <span>Регистрация с хх.хх. по хх.хх.2024</span>
+                        <span>Регистрация с 25.03 по 22.05.2024</span>
                         <a href="/trap-3.html" class="programm-block__button button button--white-red">Подробнее</a>
-                        <button class="programm-block__button button open-popup">регистрация</button>
+                        <a href="#form-popup" data-type-sport="Трап" data-step="3 этап" class="programm-block__button button open-popup">Регистрация</a>
                       </div>
                     </div>
                     <div class="programm-block__right">
@@ -747,7 +758,7 @@
                         <div class="programm-block__subtitle">25 мая</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <a href="/trap-final.html" class="programm-block__button button button--white-red">Подробнее</a>
+                        <a href="/trap-superfinal.html" class="programm-block__button button button--white-red">Подробнее</a>
                       </div>
                     </div>
                     <div class="programm-block__right programm-block__right--big-padding">
@@ -782,9 +793,9 @@
                         <div class="programm-block__subtitle">2-3 марта</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <span>Регистрация с хх.хх. по хх.хх.2024</span>
+                        <span>Регистрация с 29.01 по 29.02.2024</span>
                         <a href="/sport-compact-pro-1.html" class="programm-block__button button button--white-red">Подробнее</a>
-                        <button class="programm-block__button button open-popup">регистрация</button>
+                        <a href="#form-popup" data-type-sport="Спортинг-компакт.Спортсмены" data-step="1 этап" class="programm-block__button button open-popup">Регистрация</a>
                       </div>
                     </div>
                     <div class="programm-block__right programm-block__right--big-margin">
@@ -814,9 +825,9 @@
                         <div class="programm-block__subtitle">16-17 марта</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <span>Регистрация с хх.хх. по хх.хх.2024</span>
+                        <span>Регистрация с 04.03 по 14.03.2024</span>
                         <a href="/sport-compact-pro-2.html" class="programm-block__button button button--white-red">Подробнее</a>
-                        <button class="programm-block__button button open-popup">регистрация</button>
+                        <a href="#form-popup" data-type-sport="Спортинг-компакт.Спортсмены" data-step="2 этап" class="programm-block__button button open-popup">Регистрация</a>
                       </div>
                     </div>
                     <div class="programm-block__right programm-block__right--big-margin">
@@ -846,9 +857,9 @@
                         <div class="programm-block__subtitle">6-7 апреля</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <span>Регистрация с хх.хх. по хх.хх.2024</span>
+                        <span>Регистрация с 18.03 по 04.04.2024</span>
                         <a href="/sport-compact-pro-3.html" class="programm-block__button button button--white-red">Подробнее</a>
-                        <button class="programm-block__button button open-popup">регистрация</button>
+                        <a href="#form-popup" data-type-sport="Спортинг-компакт.Спортсмены" data-step="3 этап" class="programm-block__button button open-popup">Регистрация</a>
                       </div>
                     </div>
                     <div class="programm-block__right programm-block__right--big-margin">
@@ -943,9 +954,9 @@
                         <div class="programm-block__subtitle">9 марта</div>
                       </div>
                       <div class="programm-block__buttons">
-                        <span>Регистрация с хх.хх. по хх.хх.2024</span>
+                        <span>Регистрация с 29.02 по 07.03.2024</span>
                         <a href="/sport-compact-am-1.html" class="programm-block__button button button--white-red">Подробнее</a>
-                        <button class="programm-block__button button open-popup">регистрация</button>
+                        <a href="#form-popup" data-type-sport="Спортинг-компакт.Любители" data-step="Отбор" class="programm-block__button button open-popup">Регистрация</a>
                       </div>
                     </div>
                     <div class="programm-block__right programm-block__right--big-margin">
