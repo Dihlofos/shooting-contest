@@ -20,6 +20,12 @@ $(document).ready(function () {
 
   $(".open-popup").click(function (e) {
     e.preventDefault();
+
+    console.log(
+      '$(this).attr("data-type-sport")',
+      $(this).attr("data-type-sport")
+    );
+    console.log('$(this).attr("data-type-step")', $(this).attr("data-step"));
     $("input[name='type-sport']").val($(this).attr("data-type-sport"));
     $("input[name='step']").val($(this).attr("data-step"));
     $(".open-popup").magnificPopup("open");
@@ -33,14 +39,16 @@ $(document).ready(function () {
     if ($(".form-step-2").hasClass("show") && window.sendForm == false) {
       window.sendForm = true;
       $.ajax({
-        url: '/send-form.php',
+        url: "/send-form.php",
         data: $("#form-popup").serialize(),
         processData: false,
         contentType: false,
-        type: 'GET',
-        success: function(data) {
-          $('#form-popup > div').html('<div class="form-popup__title">ВАША ЗАЯВКА ОТПРАВЛЕНА</div><div class="form-popup__scroll show"><div>В ближайшее время с вами свяжутся по указанным в форме контактам.</div></div>');
-        }
+        type: "GET",
+        success: function (data) {
+          $("#form-popup > div").html(
+            '<div class="form-popup__title">ВАША ЗАЯВКА ОТПРАВЛЕНА</div><div class="form-popup__scroll show"><div>В ближайшее время с вами свяжутся по указанным в форме контактам.</div></div>'
+          );
+        },
       });
     } else {
       $(".form-step-2").addClass("show");
