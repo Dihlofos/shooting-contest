@@ -213,12 +213,13 @@ $(document).ready(function () {
 "use strict";
 (function () {
   const tabsContainer = document.querySelector(".js-tabs");
-  const triggers = tabsContainer.querySelectorAll(".js-tab-trigger");
-  const tabs = tabsContainer.querySelectorAll(".js-tab");
 
-  if (!tabsContainer || !triggers || !tabs) {
+  if (!tabsContainer) {
     return;
   }
+
+  const triggers = tabsContainer.querySelectorAll(".js-tab-trigger");
+  const tabs = tabsContainer.querySelectorAll(".js-tab");
 
   triggers.forEach((trigger) => {
     trigger.addEventListener("click", (event) => {

@@ -24,10 +24,17 @@
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 
+    &:disabled {
+      background-color: #B0B0B0;
+      border-color: #B0B0B0;
+      cursor: not-allowed;
+    }
+
     &:hover,
     &:active {
+        border-color: $purpler;
         background-color: $purpler;
-        color: $darkRed;
+        color: $white;
     }
 
     @media (max-width: $tablet) {
@@ -52,10 +59,34 @@
       &:hover,
       &:active {
         background-color: transparent;
+        border-color: $white;
         color: $white;
 
           @media (max-width: $tablet) {
             background-color: $white;
+            color: $darkRed;
+          }
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &--white-red {
+      background-color: $white;
+      border-color: $darkRed;
+      color: $darkRed;
+
+      &:hover,
+      &:active {
+        border-color: $darkRed;
+        background-color: $darkRed;
+        color: $white;
+
+          @media (max-width: $tablet) {
+            background-color: $white;
+            border-color: $darkRed;
             color: $darkRed;
           }
       }
