@@ -250,6 +250,9 @@ button.mfp-close{
         width: 100%;
         max-width: 580px;
     }
+    .form-popup__mt{
+      margin-top: 24px!important;
+    }
 
     @media (max-width: 768px) {
         .form-popup__title{

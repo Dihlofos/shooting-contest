@@ -20,14 +20,8 @@ $(document).ready(function () {
 
   $(".open-popup").click(function (e) {
     e.preventDefault();
-    $('select option:contains("' + $(this).attr("data-type-sport") + '")').prop(
-      "selected",
-      true
-    );
-    $('select option:contains("' + $(this).attr("data-step") + '")').prop(
-      "selected",
-      true
-    );
+    $("input[name='type-sport']").val($(this).attr("data-type-sport"));
+    $("input[name='step']").val($(this).attr("data-step"));
     $(".open-popup").magnificPopup("open");
   });
 
@@ -36,16 +30,14 @@ $(document).ready(function () {
   new AirDatepicker("#birthday");
 
   $("#form-popup").submit(function () {
-    var form = $(this);
     if ($(".form-step-2").hasClass("show") && window.sendForm == false) {
       window.sendForm = true;
       $.ajax({
         url: '/send-form.php',
-        data: form.serialize(),
+        data: $("#form-popup").serialize(),
         processData: false,
         contentType: false,
-        type: 'POST',
-        dataType: 'JSON',
+        type: 'GET',
         success: function(data) {
           $('#form-popup > div').html('<div class="form-popup__title">ВАША ЗАЯВКА ОТПРАВЛЕНА</div><div class="form-popup__scroll show"><div>В ближайшее время с вами свяжутся по указанным в форме контактам.</div></div>');
         }
