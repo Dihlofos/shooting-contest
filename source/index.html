@@ -51,19 +51,26 @@
                 <span>1/2</span>
             </div>
             <div class="form-popup__scroll form-step-1 show">
-              <div>
-                Регистрация — с 29.01 по 20.02.2024
-              </div>
               <div class="form-popup__select">
-                  <select name="type-sport" id="">
+                  <select name="type-sport" id="" disabled>
+                      <option selected value="" disabled hidden >Дисциплина</option>
                       <option value="Скит">Скит</option>
                       <option value="Трап">Трап</option>
                       <option value="Любители-охотники. Спортинг-компакт">Любители-охотники. Спортинг-компакт</option>
                       <option value="Спортинг-компакт">Спортинг-компакт</option>
                   </select>
               </div>
+              <div class="form-popup__select">
+                <select name="step" id="" disabled>
+                    <option selected value="1 этап">1 этап</option>
+                    <option value="2 этап">2 этап</option>
+                    <option value="3 этап">3 этап</option>
+                    <option value="Финал">Финал</option>
+                    <option value="Суперфинал">Суперфинал</option>
+                </select>
+            </div>
               <div>
-                <input type="text" placeholder="Фамилия" name="lastname" required>
+                <input type="text" id="name-form" placeholder="Фамилия" name="lastname" required>
               </div>
                 <div>
                     <input type="text" placeholder="Имя" name="name" required>
@@ -427,7 +434,7 @@
                       <p>В&nbsp;Суперфинал попадают 6&nbsp;человек (3&nbsp;мужчины и&nbsp;3&nbsp;женщины по&nbsp;лучшим результатам, включая юниоров).</p>
                     </div>
                   </div>
-                  <a href="#form-popup" data-type-sport="Трап" class="sports__button button button--white button--big open-popup">Регистрация</a>
+                  <a href="#form-popup" data-type-sport="Трап" data-step="3 этап" class="sports__button button button--white button--big open-popup">Регистрация</a>
                 </div>
               </div>
               <div class="sports__block">
