@@ -51,25 +51,13 @@
                 <span>1/2</span>
             </div>
             <div class="form-popup__scroll form-step-1 show">
-              <div class="form-popup__select">
-                  <select name="type-sport" id="" disabled>
-                      <option selected value="" disabled hidden >Дисциплина</option>
-                      <option value="Скит">Скит</option>
-                      <option value="Трап">Трап</option>
-                      <option value="Любители-охотники. Спортинг-компакт">Любители-охотники. Спортинг-компакт</option>
-                      <option value="Спортинг-компакт">Спортинг-компакт</option>
-                  </select>
+              <div >
+                <input type="text" name="type-sport" readonly value="Трап">
               </div>
-              <div class="form-popup__select">
-                <select name="step" id="" disabled>
-                    <option selected value="1 этап">1 этап</option>
-                    <option value="2 этап">2 этап</option>
-                    <option value="3 этап">3 этап</option>
-                    <option value="Финал">Финал</option>
-                    <option value="Суперфинал">Суперфинал</option>
-                </select>
-            </div>
               <div>
+                <input type="text" name="step" readonly value="1 этап">
+              </div>
+              <div class="form-popup__mt">
                 <input type="text" id="name-form" placeholder="Фамилия" name="lastname" required>
               </div>
                 <div>
@@ -85,10 +73,14 @@
                         <option value="Ж">Жен</option>
                     </select>
                 </div>
-                <div>
-                  <input type="text" placeholder="Город" name="city" required>
+                <div >
+                  <input type="text" id="birthday" placeholder="Дата рождения" name="birthday" required readonly>
               </div>
-                <div class="form-popup__select">
+              <div>
+                <input type="text" placeholder="Город" name="city" required>
+            </div>
+
+                <div class="form-popup__select form-popup__mt">
                   <select name="sport" id="" required>
                       <option selected value="" disabled hidden >Спортивный разряд</option>
                       <option value="ЗМС">ЗМС</option>
@@ -101,16 +93,14 @@
                       <option value="Без разряда">Без разряда</option>
                   </select>
               </div>
-                <div>
-                    <input type="text" id="birthday" placeholder="Дата рождения" name="birthday" required readonly>
-                </div>
-                <div>
+
+                <div class="form-popup__mt">
                     <input type="text" placeholder="Номер телефона" name="phone" required>
                 </div>
                 <div>
                     <input type="email" placeholder="E-mail" name="email" required>
                 </div>
-                <div class="margin-bottom">
+                <div class="margin-bottom form-popup__mt">
                     <input type="text" placeholder="Марка и номер автомобиля (при необходимости)" name="auto">
                     <span class="form-popup__small-text">
                         для парковки на площадке проведения
