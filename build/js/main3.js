@@ -59,21 +59,10 @@ $(document).ready(function () {
         } else {
           this.st.focus = "#name-form";
         }
+        $("input[name='type-sport']").val($(this.st.el[0]).attr("data-type-sport"));
+        $("input[name='step']").val($(this.st.el[0]).attr("data-step"));
       },
     },
-  });
-
-  $(".open-popup").click(function (e) {
-    e.preventDefault();
-
-    console.log(
-      '$(this).attr("data-type-sport")',
-      $(this).attr("data-type-sport")
-    );
-    console.log('$(this).attr("data-type-step")', $(this).attr("data-step"));
-    $("input[name='type-sport']").val($(this).attr("data-type-sport"));
-    $("input[name='step']").val($(this).attr("data-step"));
-    $(".open-popup").magnificPopup("open");
   });
 
   $("input[name='phone']").mask("+7(999) 999-9999");
@@ -90,8 +79,7 @@ $(document).ready(function () {
         contentType: false,
         type: "GET",
         success: function (data) {
-          $("#form-popup > div").html(
-            '<div class="form-popup__title">ВАША ЗАЯВКА ОТПРАВЛЕНА</div><div class="form-popup__scroll show"><div>В ближайшее время с вами свяжутся по указанным в форме контактам.</div></div>'
+          $("#form-popup > div").html(JSON.parse(data).MESSAGE
           );
         },
       });

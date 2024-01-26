@@ -253,6 +253,9 @@ button.mfp-close{
     .form-popup__mt{
       margin-top: 24px!important;
     }
+    .disable-input{
+      color: #B5B5B5;
+    }
 
     @media (max-width: 768px) {
         .form-popup__title{
