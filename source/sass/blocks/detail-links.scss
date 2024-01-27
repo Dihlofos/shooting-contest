@@ -2,6 +2,8 @@
   padding: 8rem 0 0;
   width: 100%;
 
+
+
   @media (max-width: $tablet) {
     padding: 5rem 0 0;
   }
@@ -25,6 +27,8 @@
     height: 27rem;
     width: calc(33% - 1rem);
     text-decoration: none;
+
+
 
     @media (max-width: $tablet) {
       padding: 2rem;
@@ -80,6 +84,25 @@
           transform: scale(1);
         }
       }
+    }
+
+    &.disabled {
+      background-color: #B0B0B0;
+      border-color: #B0B0B0;
+      cursor: not-allowed;
+      pointer-events: none;
+
+      svg {
+        filter: grayscale(1);
+        opacity: 0.6;
+      }
+
+      &:before {
+        content: "";
+        background-color: #B0B0B0;
+        border-color: #B0B0B0;
+      }
+
     }
   }
 
