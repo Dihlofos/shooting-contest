@@ -249,6 +249,7 @@
     margin: 0 0 -27.2rem 6rem;
     max-width: initial;
     width: 135%;
+    min-width: 135%;
 
     &--desktop {
       display: block;
@@ -267,6 +268,7 @@
       bottom: -27.1rem;
       left: 50.4%;
       width: 80.1rem;
+      min-width: 80.1rem;
       max-width: initial;
       margin: 0;
       transform: translateX(-50%);
@@ -291,6 +293,7 @@
       bottom: -23.2rem;
       left: 66%;
       width: 61.3rem;
+      min-width: 61.3rem;
       max-width: initial;
       margin: 0;
       transform: translateX(-50%);

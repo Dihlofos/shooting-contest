@@ -260,7 +260,9 @@
     margin: 0 0 -27.2rem -4rem;
     max-width: initial;
     width: 135%;
+    min-width: 135%;
     height: 65rem;
+    object-fit: contain;
 
     &--desktop {
       display: block;
@@ -279,6 +281,7 @@
       top: -7.5rem;
       left: 53.4%;
       width: auto;
+      min-width: auto;
       height: 57.5rem;
       max-width: initial;
       margin: 0;
