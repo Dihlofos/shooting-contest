@@ -20,9 +20,17 @@ $(document).ready(function () {
     },
   });
 
+  $.mask.definitions['D'] = "[0-3]";
+  $.mask.definitions['M'] = "[0-1]";
   $("input[name='phone']").mask("+7(999) 999-9999");
-  $("input[name='birthday']").mask("99.99.9999");
-  new AirDatepicker("#birthday");
+  $("input[name='birthday']").mask('D9.M9.9999');
+  new AirDatepicker("#birthday",{
+    onSelect: ({date, formattedDate, datepicker}) => {
+      setTimeout(function(){
+        $("input[name='birthday']").val(formattedDate);
+      }, 200);
+  }
+  });
 
   $("#form-popup").submit(function () {
     if ($(".form-step-2").hasClass("show") && window.sendForm == false) {
