@@ -96,6 +96,10 @@
         text-align: center;
       }
     }
+
+    @media (max-width: 375px) {
+      font-size: 11px;
+    }
   }
 
   &__right {
