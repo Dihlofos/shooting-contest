@@ -19,6 +19,11 @@
   if (!links.length) return;
 
   links.forEach(async (link) => {
+    if (link.href.includes("https://disk.yandex.ru")) {
+      link.classList.remove("disabled");
+      return;
+    }
+
     const response = await fetch(link.href, {
       method: "GET",
     });
