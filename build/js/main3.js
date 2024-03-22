@@ -136,12 +136,14 @@ $(document).ready(function () {
     $(".open-popup").magnificPopup("open");
   }
 
-  $.magnificPopup.open({
-    items: {
-      src: "#attention-popup",
-      type: "inline",
-    },
-  });
+  if ($("#attention-popup").length) {
+    $.magnificPopup.open({
+      items: {
+        src: "#attention-popup",
+        type: "inline",
+      },
+    });
+  }
 });
 
 (function () {
