@@ -6,7 +6,7 @@
 
   @media (max-width: $mobile) {
     height: 100% !important;
-    width: calc(100% - 40px) !important;
+    width: 100% !important;
     max-width: initial !important;
     padding: 20px;
   }
@@ -26,6 +26,5 @@
       font-size: 18px;
     }
   }
-
 
 }
