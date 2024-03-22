@@ -1,5 +1,6 @@
 $(document).ready(function () {
   window.sendForm = false;
+
   $(".open-popup").magnificPopup({
     type: "inline",
     preloader: false,
@@ -14,22 +15,24 @@ $(document).ready(function () {
         } else {
           this.st.focus = "#name-form";
         }
-        $("input[name='type-sport']").val($(this.st.el[0]).attr("data-type-sport"));
+        $("input[name='type-sport']").val(
+          $(this.st.el[0]).attr("data-type-sport")
+        );
         $("input[name='step']").val($(this.st.el[0]).attr("data-step"));
       },
     },
   });
 
-  $.mask.definitions['D'] = "[0-3]";
-  $.mask.definitions['M'] = "[0-1]";
+  $.mask.definitions["D"] = "[0-3]";
+  $.mask.definitions["M"] = "[0-1]";
   $("input[name='phone']").mask("+7(999) 999-9999");
-  $("input[name='birthday']").mask('D9.M9.9999');
-  new AirDatepicker("#birthday",{
-    onSelect: ({date, formattedDate, datepicker}) => {
-      setTimeout(function(){
+  $("input[name='birthday']").mask("D9.M9.9999");
+  new AirDatepicker("#birthday", {
+    onSelect: ({ date, formattedDate, datepicker }) => {
+      setTimeout(function () {
         $("input[name='birthday']").val(formattedDate);
       }, 200);
-  }
+    },
   });
 
   $("#form-popup").submit(function () {
@@ -42,8 +45,7 @@ $(document).ready(function () {
         contentType: false,
         type: "GET",
         success: function (data) {
-          $("#form-popup > div").html(JSON.parse(data).MESSAGE
-          );
+          $("#form-popup > div").html(JSON.parse(data).MESSAGE);
         },
       });
     } else {
@@ -67,4 +69,11 @@ $(document).ready(function () {
   if (formOpenParam && formOpenParam === "registerForm") {
     $(".open-popup").magnificPopup("open");
   }
+
+  $.magnificPopup.open({
+    items: {
+      src: "#attention-popup",
+      type: "inline",
+    },
+  });
 });

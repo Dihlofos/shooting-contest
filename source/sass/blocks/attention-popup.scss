@@ -1,0 +1,17 @@
+.attention-popup {
+  padding: 40px;
+  max-width: 580px !important;
+  height: 400px !important;
+
+  &__title {
+    font-family: "Mossport", "Arial", sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 24px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 0 40px;
+  }
+}
