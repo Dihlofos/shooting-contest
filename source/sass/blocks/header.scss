@@ -56,11 +56,12 @@
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 
-    @media (max-width: $tablet) {
+    @media (min-width: $tablet) {
       font-size: 2rem;
 
       &:hover {
-        background-color: $white;
+        background-color: $red;
+        border-color: $red;
         color: $white;
       }
 

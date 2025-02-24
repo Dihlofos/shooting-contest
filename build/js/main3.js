@@ -28,6 +28,8 @@
       method: "GET",
     });
 
+    console.log("response", response);
+
     if (response.url !== "https://shotgun.sport.moscow/404.html") {
       link.classList.remove("disabled");
     }
