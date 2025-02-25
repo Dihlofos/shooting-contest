@@ -28,8 +28,6 @@
     width: calc(33% - 1rem);
     text-decoration: none;
 
-
-
     @media (max-width: $tablet) {
       padding: 2rem;
       height: 20rem;
@@ -37,7 +35,8 @@
     }
 
     @media (max-width: $mobile) {
-      height: 18rem;
+      min-height: 18rem;
+      height: auto;
     }
 
     span {
@@ -54,6 +53,7 @@
 
       @media (max-width: $mobile) {
         font-size: 2.6rem;
+        margin: 0 0 2rem;
       }
     }
 

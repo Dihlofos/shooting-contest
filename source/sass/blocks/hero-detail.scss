@@ -2,8 +2,9 @@
   position: relative;
   z-index: 5;
   background-color: $purpler;
-
   height: 58rem;
+
+
 
   @media (max-width: $tablet) {
     padding: 9rem 0 4rem;
@@ -13,6 +14,20 @@
   @media (max-width: $mobile) {
     padding: 7rem 0 17.3rem;
     height: 56rem;
+
+    &--result {
+      height: 32rem;
+    }
+  }
+
+  &--result {
+    @media (max-width: $mobile) {
+      height: 38rem;
+
+      .hero-detail__content {
+        height: 22.3rem;
+      }
+    }
   }
 
   &__content {
