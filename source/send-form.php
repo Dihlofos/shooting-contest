@@ -1,4 +1,4 @@
-<?php 
+<?php
 $arResult = [
     'RESULT'  => 'ERROR',
     'MESSAGE' => 'Произошла ошибка',
@@ -23,9 +23,9 @@ $arRequired = [
 ];
 
 function sendEmail($to, $subject, $message, $headers){
-    
-    if (!mail($to, $subject, $message, $headers) ) 
-    { 
+
+    if (!mail($to, $subject, $message, $headers) )
+    {
         //echo "<pre>"; print_r('Ошибка'); echo "</pre>";
     }else{
         //echo "<pre>"; print_r('норм'); echo "</pre>";
@@ -87,11 +87,11 @@ if($_REQUEST){
                                 Я принимаю УЧ и ПНПД: Да<br>
                                 Согласен с условиями на ОПД: Да<br>
                                 Согласен на использование ФиВ: Да<br>
-                                
+
                             </div>
                         </td>
                     </tr>
-                    
+
                 </table>
             </td>
         </tr>
@@ -100,10 +100,10 @@ if($_REQUEST){
         $message = <<<HERE
         <div class="form-popup__title">ВАША ЗАЯВКА ОТПРАВЛЕНА</div><div class="form-popup__scroll show" style="max-height: 433px;">
         <div align="left">
-        
+
         <p style="
         color: #565656;
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -113,7 +113,7 @@ if($_REQUEST){
         </p>
         <h2 style="color: #3F348E;
 
-        
+
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -123,17 +123,17 @@ if($_REQUEST){
         </h2>
         <p style="
         color: #565656;
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 140%;
     ">
-            г. Москва, поселение Московский, квартал № 4, д. 2, стр. 10
+            г. Москва, ЗАО, район Солнцево, квартал № 4, д. 2, стр. 10
         </p>
         <h2 style="color: #3F348E;
 
-        
+
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -143,7 +143,7 @@ if($_REQUEST){
         </h2>
         <p style="
         color: #565656;
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -158,7 +158,7 @@ if($_REQUEST){
         </p>
         <h2 style="color: #3F348E;
 
-        
+
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -170,7 +170,7 @@ if($_REQUEST){
 
         <ul style="
         color: #565656;
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -188,7 +188,7 @@ if($_REQUEST){
         </ul>
         <p style="
         color: #565656;
-        
+
         font-size: 13px;
         font-style: italic;
         font-weight: 400;
@@ -204,7 +204,7 @@ if($_REQUEST){
 
         <h2 style="color: #EB3333;
 
-                            
+
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -214,7 +214,7 @@ if($_REQUEST){
         </h2>
         <p style="
         color: #565656;
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -226,7 +226,7 @@ if($_REQUEST){
         </p>
         <a style="color: #3F348E;
 
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -265,7 +265,7 @@ if($_REQUEST){
 HERE;
 
         $headers = "Content-type: text/html; charset=utf-8 \r\n";
-        $headers .= "From: Московский спорт <shotgun@sport.moscow>\r\n"; 
+        $headers .= "From: Московский спорт <shotgun@sport.moscow>\r\n";
         $headers .= "Reply-To: ".$_REQUEST['email']."\r\n";
 
         foreach($_REQUEST as $key => $item){
@@ -318,7 +318,7 @@ HERE;
         $response = httpPost('https://sport.mos.ru/api/registrationform/users', $data);
 
         //echo "<pre>"; print_r($response); echo "</pre>";
-        $log = date('Y-m-d H:i:s') . ' Отправка: ' . print_r($data, true) . ' Ответ: ' . $response; 
+        $log = date('Y-m-d H:i:s') . ' Отправка: ' . print_r($data, true) . ' Ответ: ' . $response;
         file_put_contents(__DIR__ . '/log.txt', $log . PHP_EOL, FILE_APPEND);
 
         $arResult = [
@@ -326,7 +326,7 @@ HERE;
             'MESSAGE' => $message,
             'DEBUG' =>  $data
         ];
-        
+
     }else{
         $arResult = [
             'RESULT'  => 'ERROR',
