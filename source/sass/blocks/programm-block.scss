@@ -200,7 +200,7 @@
     font-family: $mossport;
     text-transform: uppercase;
     color: $darkRed;
-    font-size: 2.4rem;
+    font-size: 3rem;
     line-height: 1;
     margin: 0 0 1.3rem;
 
@@ -224,7 +224,7 @@
 
   &__bullit-description {
     max-width: 37.3rem;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 
     @media (max-width: $tablet) {
       font-size: 1.4rem;
