@@ -82,8 +82,10 @@
 
     @media (max-width: $mobile) {
       position: absolute;
+      font-size: 1.3rem;
+
       width: calc(100% - 3.6rem);
-      padding-top: 3rem;
+      padding-top: 3.5rem;
       bottom: 2rem;
       left: 2rem;
 
@@ -95,6 +97,7 @@
         display: block;
         width: 100%;
         text-align: center;
+        margin: 0 0 1rem;
       }
     }
 
