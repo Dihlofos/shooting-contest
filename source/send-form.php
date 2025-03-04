@@ -1,4 +1,12 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+ 
+require_once 'PHPMailer/src/Exception.php';
+require_once 'PHPMailer/src/PHPMailer.php';
+require_once 'PHPMailer/src/SMTP.php';
+
+
 $arResult = [
     'RESULT'  => 'ERROR',
     'MESSAGE' => 'Произошла ошибка',
@@ -83,6 +91,7 @@ if($_REQUEST){
                                 Дата рождения: #birthday#<br>
                                 Телефон: #phone#<br>
                                 Электронная почта: #email#<br>
+                                Машина: #auto#<br>
                                 Являюсь владельцем ГДОО: Да<br>
                                 Я принимаю УЧ и ПНПД: Да<br>
                                 Согласен с условиями на ОПД: Да<br>
@@ -110,6 +119,16 @@ if($_REQUEST){
         line-height: 140%;
     ">
     Для подтверждения участия с вами свяжутся по указанному адресу электронной почты в течение 48 часов.
+        </p>
+        <p style="
+        color: #565656;
+
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+    ">
+    Если по истечении времени с вами не связались, пожалуйста, напишите нам на почту <a href="mailto:shotgun@sport.moscow">shotgun@sport.moscow</a>
         </p>
         <h2 style="color: #3F348E;
 
@@ -281,13 +300,43 @@ HERE;
         );
         */
         // Отправить письмо исполнителю
-
+        /*
         sendEmail(
             'shotgun@sport.moscow',
             'Заявка. '.$_REQUEST['type-sport'].' ' . $_REQUEST['step'] .' ' . $_REQUEST['lastname'] . ' ' . $_REQUEST['name'],
             $message1,
             $headers
         );
+        */
+
+        $mail = new PHPMailer;
+        $mail->CharSet = 'UTF-8';
+        
+        // Настройки SMTP
+        $mail->isSMTP();
+        $mail->SMTPAuth = true;
+        $mail->SMTPDebug = 0;
+        
+        $mail->Host = 'owa.mos.ru';
+        $mail->Port = 587;
+        $mail->Username = 'HQ\shotgun';
+        $mail->Password = '6}Zv<>?.1vbd.@ncy8VvBqz>P';
+        $mail->SMTPSecure = "tls";
+        
+        // От кого
+        $mail->setFrom('shotgun@sport.moscow', 'Московский спорт');		
+        
+        // Кому
+        $mail->addAddress('shotgun@sport.moscow', 'Московский спорт');
+        
+        // Тема письма
+        $mail->Subject = 'Заявка. '.$_REQUEST['type-sport'].' ' . $_REQUEST['step'] .' ' . $_REQUEST['lastname'] . ' ' . $_REQUEST['name'];
+        
+        // Тело письма
+        $body = $message1;
+        $mail->msgHTML($body);
+        
+        $mail->send();
 
         // Отправить заявку по api
 
@@ -324,7 +373,7 @@ HERE;
         $arResult = [
             'RESULT'  => 'OK',
             'MESSAGE' => $message,
-            'DEBUG' =>  $data
+            'DEBUG' =>  $mail->ErrorInfo
         ];
 
     }else{

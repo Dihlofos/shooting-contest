@@ -86,6 +86,7 @@
     @media (max-width: $mobile) {
       width: 34.3rem;
       height: 40rem;
+      overflow: visible;
 
       img {
         width: 34.3rem;
@@ -105,6 +106,7 @@
     margin: 0;
     text-decoration: none;
     border: none;
+    background: none;
 
     &--mobile {
       display: none;
@@ -151,23 +153,23 @@
 
 
     &--1 {
-      top: 14%;
-      left: 15.5%;
+      top: 41%;
+      left: 12.5%;
 
       @media (max-width: $tablet) {
-        top: 21.5%;
-        left: 15%;
+        top: 40.5%;
+        left: 19%;
       }
 
       @media (max-width: $mobile) {
-        top: 18%;
-        left: 19.5%;
+        top: 40.5%;
+        left: 19%;
       }
     }
 
     &--2 {
-      top: 81.5%;
-      left: 26.5%;
+      top: 70.5%;
+      left: 18.5%;
 
       @media (max-width: $tablet) {
         top: 69.5%;
@@ -175,8 +177,23 @@
       }
 
       @media (max-width: $mobile) {
-        top: 70.5%;
+        top: 69.5%;
         left: 30.5%;
+      }
+    }
+
+    &--3 {
+      top: 45.5%;
+      left: 33.5%;
+
+      @media (max-width: $tablet) {
+        top: 44.5%;
+        left: 63.5%;
+      }
+
+      @media (max-width: $mobile) {
+        top: 44.5%;
+        left: 63.5%;
       }
     }
   }
@@ -190,14 +207,16 @@
     justify-content: space-between;
     background-color: $white;
     width: 37rem;
-    height: 25rem;
+    height: 27rem;
     border-radius: 20px;
     padding: 2.2rem 3.2rem 3.2rem 3.2rem;
+    background-color: $darkPurple;
+    color: $white;
 
     @media (max-width: $tablet) {
       padding: 2.4rem 2rem;
       width: 27.4rem;
-      height: 21.9rem;
+      height: 24rem;
     }
 
     @media (max-width: $mobile) {
@@ -325,11 +344,15 @@
       font-style: normal;
     }
 
+    @media (max-width: $tablet) {
+      font-size: 1.2rem;
+    }
+
     @media (max-width: $mobile) {
       height: 3rem;
       top: 0.6rem;
       padding: 0 2.1rem 0 3.3rem;
-      font-size: 1.4rem;
+      font-size: 1.1rem;
 
       i {
         display: none;
